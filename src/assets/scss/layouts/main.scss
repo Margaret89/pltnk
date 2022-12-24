@@ -1,0 +1,132 @@
+html,
+body{
+	background: #fff;
+	font-family: $font-site;
+	@include font(normal, normal, 10px, 1.6, $color-text);
+	box-sizing:border-box;
+}
+
+body{font-size: 1.6rem;}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+img{max-width: 100%;}
+
+a{
+	text-decoration: underline;
+	transition: color 0.2s ease 0s;
+}
+
+a:hover{text-decoration: none;}
+
+p{
+	padding: 0;
+	margin-bottom: 2rem;
+}
+
+h1,.h1{
+	font-size: 4rem;
+	font-weight: bold;
+	line-height: 1.4;
+	margin-bottom: 4rem;
+}
+
+h2,.h2{
+	font-size: 3.2rem;
+	margin-bottom: 3rem;
+}
+
+h3,.h3{
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+}
+
+h4,.h4{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+h5,.h5{
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	margin: 0 auto;
+}
+
+main{
+	flex: 1 1 auto;
+	padding-bottom: 200px;
+	width: 100%;
+}
+
+.last-elem{margin-bottom: -200px;}
+
+.m-indent{
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+.mt-indent{margin-top: 200px;}
+.mb-indent{margin-bottom: 200px;}
+
+.p-indent{
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+
+.pt-indent{padding-top: 200px;}
+.pb-indent{padding-bottom: 200px;}
+
+.btn,
+input[type="submit"].btn,
+button.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	height: 6.8rem;
+	border-radius: 3.4rem;
+	@include font(none, bold, 1.5rem, 1.3, none);
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 0 60px;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	transition: all 0.2s ease 0s;
+
+	.icon{
+		flex-shrink: 0;
+		transition: fill 0.2s ease 0s;
+	}
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.text-left{text-align: left !important;}
+.text-center{text-align: center !important;}
+.text-right{text-align: right !important;}
+.text-justify{text-align: justify !important;}
+.text-uppercase{text-transform: uppercase !important;}
+.text-bold {font-weight: 700 !important;}
