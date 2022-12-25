@@ -1,4 +1,31 @@
 header.header
 	.container
 		.row
-			.col-12 header
+			.col-12
+				.header__content
+					.header__logo-wrap
+						.header__logo
+							img(src="assets/img/logo.png", alt="")
+
+						.header__slogan Производство накопительных емкостей и очистных сооружений
+
+					.top-menu
+						-
+							var list=[
+								{link:'#company', text:'О компании'},
+								{link:'#our-works', text:'Наши работы'},
+								{link:'#reviews', text:'Отзывы'},
+								{link:'#contacts', text:'Контакты'},
+							]
+						each item in list
+							.top-menu__item
+								a(href=item.link).top-menu__link.js-link-move= item.text
+
+					.header-phone
+						.header-phone__icon
+							+svg('ic-phone','ic-phone', '16', '17')
+
+						.header-phone__item
+							a(href="tel:+78005009647") <b>8 (800)</b> 500-96-47
+						.header-phone__item
+							a(href="tel:+78127038347") <b>+7 (812)</b> 703-83-47

@@ -1,4 +1,55 @@
 footer.footer
 	.container
 		.row
-			.col-12 footer
+			.col-3
+				.footer__copyright 	&copy; 2017 - 2022 Polytank
+
+				.footer__logo
+					img(src="assets/img/logo-white.png", alt="")
+
+				.footer__slogan Производство накопительных емкостей и очистных сооружений
+
+			.col-6
+				ul.footer-menu
+					-
+						var list=[
+							{text:'О компании'},
+							{text:'Доставка и оплата'},
+							{text:'Гарантии и возврат'},
+							{text:'Контакты'},
+							{text:'Наше производство'},
+							{text:'Преимущества полипропилена'},
+							{text:'Проектирование и изготовление на заказ'},
+						]
+					each item in list
+						li.footer-menu__item
+							a(href="#").footer-menu__link= item.text
+
+			.col-3
+				form.form-search.form-search_white
+					input(type="text", placeholder="Поиск по сайту")
+					button(type="submit")
+						+svg('ic-search','ic-search', '14', '14')
+
+				.footer-contacts
+					.footer-phone
+						.footer-phone__icon
+							+svg('ic-call','ic-call', '20', '20')
+
+						.footer-phone__content
+							.footer-phone__item
+								a(href="tel:+78005009647") <b>8 (800)</b> 500-96-47
+							.footer-phone__item
+								a(href="tel:+78127038347") <b>+7 (812)</b> 703-83-47
+					
+					.footer-mail
+						.footer-mail__icon
+							+svg('ic-mail','ic-mail', '18', '14')
+						.footer-mail__content
+							a(href="mailto:info@polytank.ru") info@polytank.ru
+				
+					.footer-dev Разработано в - 
+						img(src="assets/img/logo-strogov-white.png", alt="")
+
+.move-up.js-move-up
+	+svg('ic-arrow-up','ic-arrow-up', '26', '17')
