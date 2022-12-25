@@ -9,23 +9,41 @@ header.header
 
 						.header__slogan Производство накопительных емкостей и очистных сооружений
 
-					.top-menu
-						-
-							var list=[
-								{link:'#company', text:'О компании'},
-								{link:'#our-works', text:'Наши работы'},
-								{link:'#reviews', text:'Отзывы'},
-								{link:'#contacts', text:'Контакты'},
-							]
-						each item in list
-							.top-menu__item
-								a(href=item.link).top-menu__link.js-link-move= item.text
+					nav.top-menu.js-top-menu
+						.top-menu__close.js-close-menu.d-lg-none
+							.ic-hamburger.active
+								span
 
-					.header-phone
-						.header-phone__icon
+						.top-menu__content
+							-
+								var list=[
+									{link:'#company', text:'О компании'},
+									{link:'#our-works', text:'Наши работы'},
+									{link:'#reviews', text:'Отзывы'},
+									{link:'#contacts', text:'Контакты'},
+								]
+							each item in list
+								.top-menu__item
+									a(href=item.link).top-menu__link.js-link-move= item.text
+
+					.header-phone.js-header-phone
+						.header-phone__close.js-close-phones.d-lg-none
+							.ic-hamburger.active
+								span
+
+						.header-phone__content
+							.header-phone__icon
+								+svg('ic-phone','ic-phone', '16', '17')
+
+							.header-phone__item
+								a(href="tel:+78005009647") <b>8 (800)</b> 500-96-47
+							.header-phone__item
+								a(href="tel:+78127038347") <b>+7 (812)</b> 703-83-47
+
+					.header-action.d-lg-none
+						.header-action__item.js-open-phones
 							+svg('ic-phone','ic-phone', '16', '17')
 
-						.header-phone__item
-							a(href="tel:+78005009647") <b>8 (800)</b> 500-96-47
-						.header-phone__item
-							a(href="tel:+78127038347") <b>+7 (812)</b> 703-83-47
+						.header-action__item.js-open-menu
+							.ic-hamburger
+								span

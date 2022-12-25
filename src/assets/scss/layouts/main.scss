@@ -23,6 +23,12 @@ body{
 
 body{font-size: 1.5rem;}
 
+body.no-scroll{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -238,60 +244,96 @@ button.btn{
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
 
-// .link-more{
-// 	display: inline-flex;
-// 	gap: 10px;
-// 	@include font(none, none, 1.3rem, 1.4, #696969);
-// 	margin-top: 10px;
-// }
+@media (max-width: 1700px) {
+	.st-width{
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
 
-.more-text{
-	position: relative;
+@media (max-width: 1239px) {
+	.h1, h1{font-size: 3.8rem;}
+}
 
-	&.hide{
-		height: 150px;
-		overflow: hidden;
+@media (max-width: 991px) {
+	h1,.h1{font-size: 3.2rem;}
+	h2,.h2{font-size: 2.8rem;}
+	h3,.h3{font-size: 2.4rem;}
+	h4,.h4{font-size: 1.8rem;}
+	h5,.h5{font-size: 1.6rem;}
+
+	.m-indent{
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	
+	.mt-indent{margin-top: 100px;}
+	.mb-indent{margin-bottom: 100px;}
+	
+	.p-indent{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	
+	.pt-indent{padding-top: 100px;}
+	.pb-indent{padding-bottom: 100px;}
+
+	main{padding-bottom: 100px;}
+	.last-elem{margin-bottom: -100px;}
+}
+
+@media (max-width: 767px) {
+	body .container, body .container-sm{
+		width: 100%!important;
+		max-width: none;
 	}
 
-	&.hide::after{
-		content: '';
-		display: block;
-		width: 100%;
-		height: 50%;
-		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		z-index: 2;
+	body{font-size: 1.4rem;}
+
+	h1,.h1{font-size: 2.6rem;}
+	h2,.h2{font-size: 2.4rem;}
+	h3,.h3{font-size: 2.1rem;}
+	h4,.h4{font-size: 1.8rem;}
+	h5,.h5{font-size: 1.6rem;}
+
+	.m-indent{
+		margin-top: 60px;
+		margin-bottom: 60px;
 	}
+	
+	.mt-indent{margin-top: 60px;}
+	.mb-indent{margin-bottom: 60px;}
+	
+	.p-indent{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	
+	.pt-indent{padding-top: 60px;}
+	.pb-indent{padding-bottom: 60px;}
 
-	&__btn{
-		display: none;
-		position: absolute;
-		bottom: 15px;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: 3;
-		cursor: pointer;
-		transition: transform 0.4s ease 0s;
+	main{padding-bottom: 60px;}
+	.last-elem{margin-bottom: -60px;}
 
-		.icon{
-			fill: $color-text;
-			transition: fill 0.2s ease 0s;
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: 5rem;
+		border-radius: 2.5rem;
+		font-size: 1.3rem;
+		padding: 0 30px;
+
+		&_big{
+			height: 6rem;
+			border-radius: 3rem;
+			padding: 0 40px;
 		}
-
-		&:hover .icon{fill: $color-text;}
+		
+		&_small{
+			height: 4rem;
+			border-radius: 2rem;
+			font-size: 1.2rem;
+			padding: 0 20px;
+		}
 	}
-
-	&.hide &__btn{display: inline-block;}
-
-	&.open{
-		// overflow: visible;
-		padding-bottom: 30px;
-		height: auto;
-	}
-
-	&.open::after{display: none;}
-	&.open &__btn{bottom: 0;}
-	&.open &__btn .icon{transform: translateX(-50%) rotate(180deg);}
 }

@@ -1,7 +1,7 @@
 footer.footer
 	.container
 		.row
-			.col-3
+			.col-md-4.col-lg-3
 				.footer__copyright 	&copy; 2017 - 2022 Polytank
 
 				.footer__logo
@@ -9,7 +9,7 @@ footer.footer
 
 				.footer__slogan Производство накопительных емкостей и очистных сооружений
 
-			.col-6
+			.col-md-4.col-lg-6
 				ul.footer-menu
 					-
 						var list=[
@@ -25,7 +25,7 @@ footer.footer
 						li.footer-menu__item
 							a(href="#").footer-menu__link= item.text
 
-			.col-3
+			.col-md-4.col-lg-3
 				form.form-search.form-search_white
 					input(type="text", placeholder="Поиск по сайту")
 					button(type="submit")

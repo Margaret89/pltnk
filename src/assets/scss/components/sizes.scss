@@ -5,3 +5,17 @@
 		margin-top: 60px;
 	}
 }
+
+@media (max-width: 767px) {
+	.sizes{
+		&__table{
+			margin-left: -15px;
+			margin-right: -15px;
+			padding-left: 15px;
+			padding-right: 15px;
+			overflow-x: auto;
+
+			.table-site{width: 600px;}
+		}
+	}
+}

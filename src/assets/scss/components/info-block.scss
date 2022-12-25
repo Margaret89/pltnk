@@ -1,2 +1,9 @@
 /*-------------- info-block -----------------*/
-.info-block{}
+@media (max-width: 767px) {
+	.info-block{
+		&__img{
+			max-width: 80%;
+			margin: 0 auto 30px;
+		}
+	}
+}

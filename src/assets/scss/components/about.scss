@@ -32,3 +32,29 @@
 		img{margin-left: -45px;}
 	}
 }
+
+@media (max-width: 1700px) {
+	.about{
+		&__img{margin-left: 0;}
+
+		&__img_right{
+			margin-right: 0;
+			img{margin-left: 0;}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.about{
+		&__img{margin-right: 0;}
+	}
+}
+
+@media (max-width: 767px) {
+	.about{
+		&__img{
+			max-width: 80%;
+			margin: 0 auto 30px;
+		}
+	}
+}

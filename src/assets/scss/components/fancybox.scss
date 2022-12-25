@@ -1,0 +1,10 @@
+/*-------------- fancybox -----------------*/
+.fancybox{
+	&__content{max-width: 100%;}
+}
+
+@media (max-width: 767px) {
+	.fancybox{
+		&__content{padding: 30px 15px;}
+	}
+}

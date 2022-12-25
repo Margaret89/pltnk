@@ -68,3 +68,7 @@
 }
 
 .slick-slider{padding-bottom: 145px;}
+
+@media (max-width: 991px) {
+	.slick-slider{padding-bottom: 100px;}
+}

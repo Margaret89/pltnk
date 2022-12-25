@@ -70,3 +70,17 @@
 		margin-top: 16px;
 	}
 }
+
+@media (max-width: 1700px) {
+	.slider-works{
+		&::before{
+			width: calc(100% + 30px);
+			left: -15px;
+		}
+
+		&::after{
+			width: calc(100% + 28px);
+			left: -14px;
+		}
+	}
+}

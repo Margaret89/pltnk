@@ -9,6 +9,10 @@ if ($('.js-link-move').length) {
 		const top =document.getElementById(id.substr(1)).getBoundingClientRect().top+window.scrollY-80;
 		const speed = Math.round((top-thisPos)/15)+400;
 		$('body,html').animate({scrollTop: top}, speed);
+
+		$('.js-top-menu').removeClass('open');
+		$('.js-header-phone').removeClass('open');
+		$('.js-body').removeClass('no-scroll');
 	});
 }
 
@@ -113,6 +117,26 @@ if($('.js-slider-works').length){
 		slidesToScroll: 1,
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="8" height="14"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arrow-right" width="8" height="14"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 }
 
@@ -125,6 +149,14 @@ if($('.js-reviews-slider').length){
 		dots: true,
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="8" height="14"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arrow-right" width="8" height="14"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 }
 
@@ -136,6 +168,26 @@ if($('.js-certificate-slider').length){
 		slidesToScroll: 1,
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="8" height="14"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arrow-right" width="8" height="14"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+		]
 	});
 }
 
@@ -160,3 +212,25 @@ if ($('.js-more-text').length) {
 		$text.data('text', tempText);
 	});
 }
+
+// Открыть/Закрыть мобильное меню
+$('.js-open-menu').on('click',function(){
+	$('.js-top-menu').addClass('open');
+	$('.js-body').addClass('no-scroll');
+});
+
+$('.js-close-menu').on('click',function(){
+	$('.js-top-menu').removeClass('open');
+	$('.js-body').removeClass('no-scroll');
+});
+
+// Открыть/Закрыть контакты
+$('.js-open-phones').on('click',function(){
+	$('.js-header-phone').addClass('open');
+	$('.js-body').addClass('no-scroll');
+});
+
+$('.js-close-phones').on('click',function(){
+	$('.js-header-phone').removeClass('open');
+	$('.js-body').removeClass('no-scroll');
+});

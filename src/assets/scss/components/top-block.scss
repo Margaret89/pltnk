@@ -31,3 +31,29 @@
 		}
 	}
 }
+
+@media (max-width: 1700px) {
+	.top-block{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 991px) {
+	.top-block{
+		padding: 50px 30px;
+
+		.form-page{
+			margin-top: 40px;
+			padding: 50px 30px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.top-block{
+		padding: 30px 15px;
+
+		.form-page{padding: 30px 15px;}
+	}
+}

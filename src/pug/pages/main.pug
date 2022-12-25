@@ -11,7 +11,7 @@ block content
 					.st-width
 						.top-block
 							.row
-								.col-6.align-self-center
+								.col-lg-6.align-self-center
 									.top-block__content
 										h1 <b>Проектирование и производство</b> емкостного и&nbsp;перекачивающего оборудования
 
@@ -19,7 +19,7 @@ block content
 
 										a.btn.btn_border-white(href='#') Перезвоните мне
 
-								.offset-1.col-5
+								.offset-xl-1.col-xl-5.col-lg-6
 									.form-page
 										.js-valid-form
 											form.form-site
@@ -55,11 +55,11 @@ block content
 				.col-12
 					.about
 						.row
-							.col-6
+							.col-md-4.col-lg-6
 								.about__img
 									img(src="assets/img/politnk.png", alt="")
 
-							.col-6.align-self-center
+							.col-md-8.col-lg-6.align-self-center
 								h2 <b>Промышленные</b> очистные сооружения
 
 								p «Политанк» производит и продает очистные сооружения для промышленных предприятий. Мы являемся компанией полного цикла и выполняем все необходимые работы, начиная с разработки проекта комплекса очистки сточных вод заканчивая ее монтажом на объекте.
@@ -90,7 +90,7 @@ block content
 	section.info-block.m-indent
 		.container
 			.row
-				.col-6
+				.col-lg-6.col-md-8.order-2.order-md-1
 					h2 <b>Преимущества</b> сотрудничества с&nbsp;нами
 
 					p Плюсы заказа очистных сооружений, емкостного и насосного оборудования в нашей компании:
@@ -106,8 +106,9 @@ block content
 
 					a.btn.btn_secondary(href='#') Перезвоните мне
 
-				.offset-1.col-5
-					img(src="assets/img/about.png", alt="")
+				.offset-lg-1.col-lg-5.col-md-4.order-1.order-md-2
+					.info-block__img
+						img(src="assets/img/about.png", alt="")
 
 	section.sizes.m-indent
 		.container
@@ -115,64 +116,65 @@ block content
 				.col-12
 					h2.text-center <b>Таблица</b> размеров
 
-					table.table-site
-						thead
-							tr
-								th
-								th.text-center A
-								th.text-center B
-								th.text-center B
-								th.text-center C
+					.sizes__table
+						table.table-site
+							thead
+								tr
+									th
+									th.text-center A
+									th.text-center B
+									th.text-center B
+									th.text-center C
 
-						tbody
-							tr
-								td.text-center 1
-								td.text-center Наименование продукции
-								td.text-center(colspan = 3) Цены прайс-листа СПб
+							tbody
+								tr
+									td.text-center 1
+									td.text-center Наименование продукции
+									td.text-center(colspan = 3) Цены прайс-листа СПб
 
-							tr
-								td.text-center 2
-								td.text-center 
-								td.text-center(colspan = 3) на 17.03.2022
+								tr
+									td.text-center 2
+									td.text-center 
+									td.text-center(colspan = 3) на 17.03.2022
 
-							-
-								var list=[
-									{num:'3', col1:'Накопительная емкость EH', col2:'Габариты', col3:'Розница', col4:'ОПТ 2', selected:'y'},
-									{num:'4', col1:'Bioprime EH-1,5 m3', col2:'1000x1000x2000', col3:'34,000', col4:'31,000'},
-									{num:'5', col1:'Bioprime EH-2,0 m3 D100', col2:'1000x1000x2700', col3:'34,000', col4:'31,000'},
-									{num:'6', col1:'Bioprime EH-2,0 m3 D1200 (по запросу)', col2:'1200x1200x1900', col3:'34,000', col4:'31,000'},
-									{num:'7', col1:'Bioprime EH-2,5 m3', col2:'1200x1200x2300', col3:'34,000', col4:'31,000'},
-									{num:'8', col1:'Bioprime EH-3,0 m3', col2:'1200x1200x2700', col3:'34,000', col4:'31,000'},
-									{num:'9', col1:'Bioprime EH-3,5 m3', col2:'1200x1200x3200', col3:'34,000', col4:'31,000'},
-									{num:'10', col1:'Bioprime EH-4,0 m3', col2:'1200x1200x4500', col3:'34,000', col4:'31,000'},
-									{num:'11', col1:'Септик СТ Самотечный', col2:'Габариты', col3:'Розница', col4:'ОПТ 2', selected:'y'},
-									{num:'12', col1:'Bioprime EH-1,5 m3', col2:'1500x1500x2900', col3:'34,000', col4:'31,000'},
-									{num:'13', col1:'Bioprime EH-2,0 m3 D100', col2:'1500x1500x3400', col3:'34,000', col4:'31,000'},
-									{num:'14', col1:'Bioprime EH-2,0 m3 D1200 (по запросу)', col2:'1500x1500x4600', col3:'34,000', col4:'31,000'},
-									{num:'15', col1:'Bioprime EH-2,5 m3', col2:'1500x1500x5800', col3:'34,000', col4:'31,000'},
-									{num:'16', col1:'Bioprime EH-3,0 m3', col2:'1200x1200x3200', col3:'34,000', col4:'31,000'},
-									{num:'17', col1:'Bioprime EH-3,5 m3', col2:'1500x1500x2900', col3:'34,000', col4:'31,000'},
-									{num:'18', col1:'Bioprime EH-4,0 m3', col2:'1200x1200x1900', col3:'34,000', col4:'31,000'},
-								]
-							each item in list
-								if(item.selected)
-									tr.selected
-										td.text-center= item.num
-										td
-											b= item.col1
-										td.text-center
-											b= item.col2
-										td.text-center
-											b= item.col3
-										td.text-center
-											b= item.col4
-								else 
-									tr(class=item.selected?'selected':'')
-										td.text-center= item.num
-										td= item.col1
-										td.text-center= item.col2
-										td.text-center= item.col3
-										td.text-center= item.col4
+								-
+									var list=[
+										{num:'3', col1:'Накопительная емкость EH', col2:'Габариты', col3:'Розница', col4:'ОПТ 2', selected:'y'},
+										{num:'4', col1:'Bioprime EH-1,5 m3', col2:'1000x1000x2000', col3:'34,000', col4:'31,000'},
+										{num:'5', col1:'Bioprime EH-2,0 m3 D100', col2:'1000x1000x2700', col3:'34,000', col4:'31,000'},
+										{num:'6', col1:'Bioprime EH-2,0 m3 D1200 (по запросу)', col2:'1200x1200x1900', col3:'34,000', col4:'31,000'},
+										{num:'7', col1:'Bioprime EH-2,5 m3', col2:'1200x1200x2300', col3:'34,000', col4:'31,000'},
+										{num:'8', col1:'Bioprime EH-3,0 m3', col2:'1200x1200x2700', col3:'34,000', col4:'31,000'},
+										{num:'9', col1:'Bioprime EH-3,5 m3', col2:'1200x1200x3200', col3:'34,000', col4:'31,000'},
+										{num:'10', col1:'Bioprime EH-4,0 m3', col2:'1200x1200x4500', col3:'34,000', col4:'31,000'},
+										{num:'11', col1:'Септик СТ Самотечный', col2:'Габариты', col3:'Розница', col4:'ОПТ 2', selected:'y'},
+										{num:'12', col1:'Bioprime EH-1,5 m3', col2:'1500x1500x2900', col3:'34,000', col4:'31,000'},
+										{num:'13', col1:'Bioprime EH-2,0 m3 D100', col2:'1500x1500x3400', col3:'34,000', col4:'31,000'},
+										{num:'14', col1:'Bioprime EH-2,0 m3 D1200 (по запросу)', col2:'1500x1500x4600', col3:'34,000', col4:'31,000'},
+										{num:'15', col1:'Bioprime EH-2,5 m3', col2:'1500x1500x5800', col3:'34,000', col4:'31,000'},
+										{num:'16', col1:'Bioprime EH-3,0 m3', col2:'1200x1200x3200', col3:'34,000', col4:'31,000'},
+										{num:'17', col1:'Bioprime EH-3,5 m3', col2:'1500x1500x2900', col3:'34,000', col4:'31,000'},
+										{num:'18', col1:'Bioprime EH-4,0 m3', col2:'1200x1200x1900', col3:'34,000', col4:'31,000'},
+									]
+								each item in list
+									if(item.selected)
+										tr.selected
+											td.text-center= item.num
+											td
+												b= item.col1
+											td.text-center
+												b= item.col2
+											td.text-center
+												b= item.col3
+											td.text-center
+												b= item.col4
+									else 
+										tr(class=item.selected?'selected':'')
+											td.text-center= item.num
+											td= item.col1
+											td.text-center= item.col2
+											td.text-center= item.col3
+											td.text-center= item.col4
 
 					.sizes__btn
 						a.btn.btn_big(href='#')
@@ -187,13 +189,13 @@ block content
 				.col-12
 					.about
 						.row
-							.col-6.align-self-center
+							.col-md-8.col-lg-6.align-self-center
 								h2 <b>Очистка</b> сточных вод промышленных предприятий
 
 								p «Политанк» производит и продает очистные сооружения для промышленных предприятий. Мы являемся компанией полного цикла и выполняем все необходимые работы, начиная с разработки проекта комплекса очистки сточных вод заканчивая ее монтажом на объекте.
 								p Станция очистки промышленных сточных вод поставляется в полностью собранном виде, что упрощает подключение к технологическим линиям, ускоряет пусконаладочные работы и сокращает смету на строительство.
 
-							.col-6
+							.col-md-4.col-lg-6
 								.about__img.about__img_right
 									img(src="assets/img/politnk-box.png", alt="")
 
@@ -228,7 +230,7 @@ block content
 					.st-width
 						.contacts
 							.row
-								.col-5
+								.col-lg-5
 									h2 <b>Свяжитесь</b> с нами
 
 									.contacts-info
@@ -252,7 +254,7 @@ block content
 
 											.contacts-info__val с 8.00 до 21.00
 
-								.col-7
+								.col-lg-7
 									h2 <b>Или оставьте</b> заявку
 
 									.js-valid-form
@@ -351,8 +353,6 @@ block content
 				.col-12
 					.st-width
 						.map
-							script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac560a3a1ca7aaffe3ac59603c15a112d8eb937c8b8fde0e311a83eccd3e6351f&width=100%25&height=540&lang=ru_RU&scroll=true')
-
 							.map-contacts
 								.map-contacts__item
 									.map-contacts__icon
@@ -381,3 +381,5 @@ block content
 									.map-contacts__val с 8.00 до 21.00
 
 								a.btn.btn_white.btn_small.js-link-move(href="#callback") Позвоните мне
+
+							script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac560a3a1ca7aaffe3ac59603c15a112d8eb937c8b8fde0e311a83eccd3e6351f&width=100%25&height=540&lang=ru_RU&scroll=true')
