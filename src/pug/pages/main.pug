@@ -1,0 +1,383 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная';
+
+block content
+	section.top-block-wrap.mb-indent
+		.container
+			.row
+				.col-12
+					.st-width
+						.top-block
+							.row
+								.col-6.align-self-center
+									.top-block__content
+										h1 <b>Проектирование и производство</b> емкостного и&nbsp;перекачивающего оборудования
+
+										.top-block__text Наше предприятие самостоятельно изготавливает полипропиленовые и стеклопластиковые корпуса для емкостей, насосных станций и очистных сооружений.
+
+										a.btn.btn_border-white(href='#') Перезвоните мне
+
+								.offset-1.col-5
+									.form-page
+										.js-valid-form
+											form.form-site
+												.form-site__title Оставить заявку
+												
+												.form-site__content
+													.form-site__item.js-form-site-item
+														.form-site__label Ваше имя *
+														.form-site__field
+															input(type="text", required="required")
+
+													.form-site__item.js-form-site-item
+														.form-site__label Телефон *
+														.form-site__field
+															input(type="text", class="js-phone", required="required")
+
+												.form-site__bottom
+													.form-site__polit.js-form-site-polit
+														label.input-check
+															input(type='checkbox', checked="checked")
+															span.input-check__mark
+																+svg('ic-tick','ic-tick', '10', '6')
+															span.input-check__text Согласен с пользовательским 
+																a(href="#") соглашением и политикой конфиденциальности
+
+													.form-site__btn
+														button(type="submit").btn.js-btn-submit Отправить
+															+svg('ic-arr-right','ic-arr-right', '27', '9')
+
+	section.m-indent(id="company")
+		.container
+			.row
+				.col-12
+					.about
+						.row
+							.col-6
+								.about__img
+									img(src="assets/img/politnk.png", alt="")
+
+							.col-6.align-self-center
+								h2 <b>Промышленные</b> очистные сооружения
+
+								p «Политанк» производит и продает очистные сооружения для промышленных предприятий. Мы являемся компанией полного цикла и выполняем все необходимые работы, начиная с разработки проекта комплекса очистки сточных вод заканчивая ее монтажом на объекте.
+								p Станция очистки промышленных сточных вод поставляется в полностью собранном виде, что упрощает подключение к технологическим линиям, ускоряет пусконаладочные работы и сокращает смету на строительство.
+
+	section.advant-wrap.m-indent
+		.container
+			.row
+				.col-12
+					h2.text-center <b>Наши</b> преимущества
+
+					.advant
+						-
+							var list=[
+								{icon:'ic-doc', icon_width:'40', icon_height:'40', text:'Мы строго соблюдаем действующие ГОСТ, СП, СанПиН, Регламент 123-ФЗ при изготовлении и монтаже емкостей'},
+								{icon:'ic-money', icon_width:'40', icon_height:'40', text:'Вы получаете емкости по доступной стоимости без ущерба качества.'},
+								{icon:'ic-sizes', icon_width:'40', icon_height:'40', text:'Вы можете заказать оборудование любой формы и размеров в зависимости от особенностей объекта.'},
+								{icon:'ic-delivery', icon_width:'40', icon_height:'30', text:'Вам не нужно самостоятельно заботиться о доставке, все вопросы мы возьмем на себя;'},
+								{icon:'ic-time', icon_width:'40', icon_height:'32', text:'Мы изготовим для вас нашу продукцию в минимально возможные сроки.'},
+							]
+						each item in list
+							.advant__item
+								.advant__icon
+									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+								.advant__text= item.text
+
+	section.info-block.m-indent
+		.container
+			.row
+				.col-6
+					h2 <b>Преимущества</b> сотрудничества с&nbsp;нами
+
+					p Плюсы заказа очистных сооружений, емкостного и насосного оборудования в нашей компании:
+
+					ul.list-site
+						li Мы строго соблюдаем действующие ГОСТ, СП, СанПиН, Регламент 123-ФЗ и отраслевые нормативные документы при изготовлении и монтаже емкостей;
+						li Вы получаете емкости по доступной стоимости без ущерба качества. Снижение цены стало возможным благодаря оптимизации технологических процессов.
+						li Вы можете заказать оборудование любой формы и размеров в зависимости от особенностей объекта.
+						li Вам не нужно самостоятельно заботиться о доставке, все вопросы мы возьмем на себя;
+						li Мы изготовим для вас нашу продукцию в минимально возможные сроки.
+
+					p Для получения дополнительных консультаций и оформления заявки обратитесь к менеджерам отдела по работе с клиентами по телефону или заполните форму на сайте.
+
+					a.btn.btn_secondary(href='#') Перезвоните мне
+
+				.offset-1.col-5
+					img(src="assets/img/about.png", alt="")
+
+	section.sizes.m-indent
+		.container
+			.row
+				.col-12
+					h2.text-center <b>Таблица</b> размеров
+
+					table.table-site
+						thead
+							tr
+								th
+								th.text-center A
+								th.text-center B
+								th.text-center B
+								th.text-center C
+
+						tbody
+							tr
+								td.text-center 1
+								td.text-center Наименование продукции
+								td.text-center(colspan = 3) Цены прайс-листа СПб
+
+							tr
+								td.text-center 2
+								td.text-center 
+								td.text-center(colspan = 3) на 17.03.2022
+
+							-
+								var list=[
+									{num:'3', col1:'Накопительная емкость EH', col2:'Габариты', col3:'Розница', col4:'ОПТ 2', selected:'y'},
+									{num:'4', col1:'Bioprime EH-1,5 m3', col2:'1000x1000x2000', col3:'34,000', col4:'31,000'},
+									{num:'5', col1:'Bioprime EH-2,0 m3 D100', col2:'1000x1000x2700', col3:'34,000', col4:'31,000'},
+									{num:'6', col1:'Bioprime EH-2,0 m3 D1200 (по запросу)', col2:'1200x1200x1900', col3:'34,000', col4:'31,000'},
+									{num:'7', col1:'Bioprime EH-2,5 m3', col2:'1200x1200x2300', col3:'34,000', col4:'31,000'},
+									{num:'8', col1:'Bioprime EH-3,0 m3', col2:'1200x1200x2700', col3:'34,000', col4:'31,000'},
+									{num:'9', col1:'Bioprime EH-3,5 m3', col2:'1200x1200x3200', col3:'34,000', col4:'31,000'},
+									{num:'10', col1:'Bioprime EH-4,0 m3', col2:'1200x1200x4500', col3:'34,000', col4:'31,000'},
+									{num:'11', col1:'Септик СТ Самотечный', col2:'Габариты', col3:'Розница', col4:'ОПТ 2', selected:'y'},
+									{num:'12', col1:'Bioprime EH-1,5 m3', col2:'1500x1500x2900', col3:'34,000', col4:'31,000'},
+									{num:'13', col1:'Bioprime EH-2,0 m3 D100', col2:'1500x1500x3400', col3:'34,000', col4:'31,000'},
+									{num:'14', col1:'Bioprime EH-2,0 m3 D1200 (по запросу)', col2:'1500x1500x4600', col3:'34,000', col4:'31,000'},
+									{num:'15', col1:'Bioprime EH-2,5 m3', col2:'1500x1500x5800', col3:'34,000', col4:'31,000'},
+									{num:'16', col1:'Bioprime EH-3,0 m3', col2:'1200x1200x3200', col3:'34,000', col4:'31,000'},
+									{num:'17', col1:'Bioprime EH-3,5 m3', col2:'1500x1500x2900', col3:'34,000', col4:'31,000'},
+									{num:'18', col1:'Bioprime EH-4,0 m3', col2:'1200x1200x1900', col3:'34,000', col4:'31,000'},
+								]
+							each item in list
+								if(item.selected)
+									tr.selected
+										td.text-center= item.num
+										td
+											b= item.col1
+										td.text-center
+											b= item.col2
+										td.text-center
+											b= item.col3
+										td.text-center
+											b= item.col4
+								else 
+									tr(class=item.selected?'selected':'')
+										td.text-center= item.num
+										td= item.col1
+										td.text-center= item.col2
+										td.text-center= item.col3
+										td.text-center= item.col4
+
+					.sizes__btn
+						a.btn.btn_big(href='#')
+							+svg('ic-xlsx','ic-xlsx', '30', '36')
+							|Скачать таблицу
+							br
+							|размеров
+
+	section.m-indent
+		.container
+			.row
+				.col-12
+					.about
+						.row
+							.col-6.align-self-center
+								h2 <b>Очистка</b> сточных вод промышленных предприятий
+
+								p «Политанк» производит и продает очистные сооружения для промышленных предприятий. Мы являемся компанией полного цикла и выполняем все необходимые работы, начиная с разработки проекта комплекса очистки сточных вод заканчивая ее монтажом на объекте.
+								p Станция очистки промышленных сточных вод поставляется в полностью собранном виде, что упрощает подключение к технологическим линиям, ускоряет пусконаладочные работы и сокращает смету на строительство.
+
+							.col-6
+								.about__img.about__img_right
+									img(src="assets/img/politnk-box.png", alt="")
+
+	section.slider-works-wrap.m-indent(id="our-works")
+		.container
+			.row
+				.col-12
+					h2.text-center <b>Выполненные</b> работы
+
+					.slider-works.js-slider-works
+						-
+							var list=[
+								{img:'work-slide1.jpg', text:'Емкость противопожарного запаса воды 41 м3'},
+								{img:'work-slide2.jpg', text:'Емкость для питьевой воды наземная 120 м3'},
+								{img:'work-slide3.jpg', text:'Емкость противопожарного запаса воды 41 м3'},
+								{img:'work-slide4.jpg', text:'Емкость для питьевой воды наземная 120 м3'},
+								{img:'work-slide3.jpg', text:'Емкость противопожарного запаса воды 41 м3'},
+								{img:'work-slide2.jpg', text:'Емкость для питьевой воды наземная 120 м3'},
+								{img:'work-slide1.jpg', text:'Емкость противопожарного запаса воды 41 м3'},
+								{img:'work-slide4.jpg', text:'Емкость для питьевой воды наземная 120 м3'},
+							]
+						each item in list
+							.slider-works-item
+								.slider-works-item__img(style="background-image: url(assets/img/"+item.img+")")
+
+								.slider-works-item__text= item.text
+
+	section.contacts-wrap.m-indent(id="callback")
+		.container
+			.row
+				.col-12
+					.st-width
+						.contacts
+							.row
+								.col-5
+									h2 <b>Свяжитесь</b> с нами
+
+									.contacts-info
+										.contacts-info__item
+											.contacts-info__icon
+												+svg('ic-phone','ic-phone', '15', '16')
+
+											.contacts-info__val
+												a(href="tel:+78127038347").contacts-info__phone +7 (812) 703 83 47
+
+										.contacts-info__item
+											.contacts-info__icon
+												+svg('ic-mail','ic-mail', '18', '15')
+
+											.contacts-info__val
+												a(href="mailto:info@polytank.ru").contacts-info__mail info@polytank.ru
+
+										.contacts-info__item
+											.contacts-info__icon
+												+svg('ic-clock','ic-clock', '18', '17')
+
+											.contacts-info__val с 8.00 до 21.00
+
+								.col-7
+									h2 <b>Или оставьте</b> заявку
+
+									.js-valid-form
+										form.form-site.form-site_line
+											.form-site__content
+												.form-site__item.js-form-site-item
+													.form-site__label Ваше имя *
+													.form-site__field
+														input(type="text", required="required")
+
+												.form-site__item.js-form-site-item
+													.form-site__label Телефон *
+													.form-site__field
+														input(type="text", class="js-phone", required="required")
+
+											.form-site__bottom
+												.form-site__polit.js-form-site-polit
+													label.input-check
+														input(type='checkbox', checked="checked")
+														span.input-check__mark
+															+svg('ic-tick','ic-tick', '10', '6')
+														span.input-check__text Согласен с пользовательским 
+															a(href="#") соглашением и политикой конфиденциальности
+
+												.form-site__btn
+													button(type="submit").btn.js-btn-submit Отправить
+														+svg('ic-arr-right','ic-arr-right', '27', '9')
+
+	section.reviews-slider-wrap.m-indent(id="reviews")
+		.container
+			.row
+				.col-12
+					h2.text-center <b>Отзывы</b> клиентов
+
+					.reviews-slider.js-reviews-slider
+						-
+							var list=[
+								{img:'irina.jpg', name:'Ирина Иванова', date:'6.04.2022', star:'100%', text:'Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее.'},
+								//- {img:'vlad.jpg', name:'Владислав Иванов', company:'Компания «Политанк»', date:'12.06.2022', star:'80%', text:'Когда мы накопили с женой дене.'},
+								{img:'vlad.jpg', name:'Владислав Иванов', company:'Компания «Политанк»', date:'12.06.2022', star:'80%', text:'Когда мы накопили с женой денег на квартиру и купили двушку, сразу встал вопрос о ее ремонте. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее.'},
+								//- {img:'vlad.jpg', name:'Владислав Иванов', company:'Компания «Политанк»', date:'12.06.2022', star:'80%', text:'Когда мы накопили с женой дене.'},
+								{img:'vlad.jpg', name:'Георгий Иванов', company:'Компания «Политанк»', date:'12.06.2022', star:'80%', text:'Когда мы накопили с женой денег на квартиру и купили двушку, сразу встал вопрос о ее ремонте. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее.'},
+								{img:'vlad.jpg', name:'Иван Иванов', company:'Компания «Политанк»', date:'12.06.2022', star:'80%', text:'Когда мы накопили с женой денег на квартиру и купили двушку, сразу встал вопрос о ее ремонте. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее.'},
+								{img:'irina.jpg', name:'Мария Иванова', date:'6.04.2022', star:'100%', text:'Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее.'},
+								{img:'vlad.jpg', name:'Василий Иванов', date:'12.06.2022', star:'80%', text:'Когда мы накопили с женой денег на квартиру и купили двушку, сразу встал вопрос о ее ремонте. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее. Но на ремонт своими силами не было времени, а прекратить скитаться по съемным квартирам как можно быстрее очень хотелось. Поэтому решили нанять специалистов по ремонту, которые сделают это быстрее.'},
+							]
+						each item in list
+							.review-item
+								.review-item__img(style="background-image: url(assets/img/"+item.img+")")
+
+								.review-item__content
+									.review-item__top
+										.review-item__name= item.name
+										.review-item__date= item.date
+									
+									if(item.company)
+										.review-item__company= item.company
+
+									.rating
+										.rating__content(style="width:"+item.star)
+
+									.review-item__text
+										.more-text.js-more-text
+											.more-text__content.js-more-text-content= item.text
+
+	section.m-indent
+		.container
+			.row
+				.col-12
+					h2.text-center <b>Сертификаты</b> и документы
+
+					.certificate-slider.js-certificate-slider
+						-
+							var list=[
+								{img:'certificate1.jpg'},
+								{img:'certificate2.jpg'},
+								{img:'certificate3.jpg'},
+								{img:'certificate4.jpg'},
+								{img:'certificate5.jpg'},
+								{img:'certificate6.jpg'},
+								{img:'certificate2.jpg'},
+								{img:'certificate4.jpg'},
+								{img:'certificate3.jpg'},
+								{img:'certificate1.jpg'},
+								{img:'certificate6.jpg'},
+								{img:'certificate5.jpg'},
+							]
+						each item in list
+							.certificate-slider__item
+								a(data-fancybox='certificate-slider', data-src="assets/img/"+item.img)
+									img(src="assets/img/"+item.img)
+
+	section.map-wrap.mt-indent(id="contacts")
+		.container
+			.row
+				.col-12
+					.st-width
+						.map
+							script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac560a3a1ca7aaffe3ac59603c15a112d8eb937c8b8fde0e311a83eccd3e6351f&width=100%25&height=540&lang=ru_RU&scroll=true')
+
+							.map-contacts
+								.map-contacts__item
+									.map-contacts__icon
+										+svg('ic-phone','ic-phone', '15', '16')
+
+									.map-contacts__val
+										a(href="tel:+78127038347").map-contacts__phone +7 (812) 703 83 47
+
+								.map-contacts__item
+									.map-contacts__icon
+										+svg('ic-address','ic-address', '16', '18')
+
+									.map-contacts__val Петродворцовый район, посёлок Стрельна, Фронтовая улица, 3Б
+
+								.map-contacts__item
+									.map-contacts__icon
+										+svg('ic-mail','ic-mail', '18', '15')
+
+									.map-contacts__val
+										a(href="mailto:info@polytank.ru").map-contacts__mail info@polytank.ru
+
+								.map-contacts__item
+									.map-contacts__icon
+										+svg('ic-clock','ic-clock', '18', '17')
+
+									.map-contacts__val с 8.00 до 21.00
+
+								a.btn.btn_white.btn_small.js-link-move(href="#callback") Позвоните мне

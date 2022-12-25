@@ -66,6 +66,26 @@ block content
 				br
 				br
 				br
+				div.h2 Списки
+				ul.list-site
+					li Ненумерованный список
+					li Ненумерованный список
+					li Ненумерованный список
+					li Ненумерованный список
+					li Ненумерованный список
+					
+				br
+				br
+				ol
+					li Нумерованный список
+					li Нумерованный список
+					li Нумерованный список
+					li Нумерованный список
+					li Нумерованный список
+
+				br
+				br
+				br
 				div.h2 Кнопки
 				a.btn(href='#') Кнопка
 				br
@@ -77,8 +97,40 @@ block content
 				a.btn.btn_border(href='#') Кнопка
 				br
 				br
+				a.btn.btn_big(href='#') Кнопка
+				br
+				br
+				a.btn.btn_small(href='#') Кнопка
+				br
+				br
+				a.btn.btn_secondary(href='#') Кнопка
+				br
+				br
 				div(style="background: #2b4055; padding: 40px")
+					a.btn.btn_white(href='#') Кнопка
+					br
+					br
 					a.btn.btn_border-white(href='#') Кнопка
+
+				br
+				br
+				br
+				.h2 Нестандартный radio
+				label.input-radio
+					input(type='radio' name='param1')
+					span.input-radio__mark
+					span.input-radio__text Текст
+				
+				br
+				br
+				br
+				.h2 Нестандартный checkbox
+				label.input-check
+					input(type='checkbox')
+					span.input-check__mark
+						+svg('ic-tick','ic-tick', '10', '6')
+					span.input-check__text Текст
+
 
 				br
 				br
@@ -88,6 +140,21 @@ block content
 						.type-icon__img
 							+svg('ic-arr-right','ic-arr-right', '27', '9')
 						.type-icon__name ic-arr-right
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+						.type-icon__name ic-arrow-left
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+						.type-icon__name ic-arrow-right
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-down','ic-arrow-down', '14', '8')
+						.type-icon__name ic-arrow-down
 
 					.type-icon__item
 						.type-icon__img
@@ -101,10 +168,50 @@ block content
 
 					.type-icon__item
 						.type-icon__img
-							+svg('ic-call','ic-call', '20', '20')
-						.type-icon__name ic-call
+							+svg('ic-mail','ic-mail', '18', '15')
+						.type-icon__name ic-mail
 
 					.type-icon__item
 						.type-icon__img
-							+svg('ic-mail','ic-mail', '18', '14')
-						.type-icon__name ic-mail
+							+svg('ic-address','ic-address', '16', '18')
+						.type-icon__name ic-address
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-tick','ic-tick', '16', '10')
+						.type-icon__name ic-tick
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-doc','ic-doc', '40', '40')
+						.type-icon__name ic-doc
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-money','ic-money', '40', '40')
+						.type-icon__name ic-money
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-sizes','ic-sizes', '40', '40')
+						.type-icon__name ic-sizes
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-delivery','ic-delivery', '40', '30')
+						.type-icon__name ic-delivery
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-time','ic-time', '40', '32')
+						.type-icon__name ic-time
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-clock','ic-clock', '18', '17')
+						.type-icon__name ic-clock
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-xlsx','ic-xlsx', '30', '36')
+						.type-icon__name ic-xlsx

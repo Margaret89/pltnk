@@ -1,0 +1,70 @@
+/*-------------- slick -----------------*/
+.btn-arr{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 50px;
+	background: var(--color-secondary);
+	border: none;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	box-shadow: none;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+
+	.icon{
+		fill: #fff;
+		transition: fill 0.2s ease 0s;
+	}
+
+	&:hover{background: var(--color-secondary-hover);}
+
+	&_left{
+		left: calc(50% - 80px);
+		border-radius: 25px 0 0 25px;
+	}
+
+	&_right{
+		right: calc(50% - 80px);
+		border-radius: 0 25px 25px 0;
+	}
+}
+
+.slick-dots{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 32px;
+
+	li{@include reset-list;}
+
+	button{
+		display: inline-block;
+		vertical-align: top;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #c6c6c6;
+		margin: 6px;
+		padding: 0;
+		font-size: 0;
+		border: none;
+		outline: none;
+		box-shadow: none;
+		transition: background 0.2s ease 0s;
+		cursor: pointer;
+	}
+
+	button:hover,
+	.slick-active button{
+		background: var(--color-secondary);
+	}
+}
+
+.slick-slider{padding-bottom: 145px;}

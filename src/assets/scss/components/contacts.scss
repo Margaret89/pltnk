@@ -1,0 +1,81 @@
+/*-------------- contacts -----------------*/
+.contacts{
+	background: linear-gradient(270deg, #6FC6E3 0%, #0099CC 100%), #EBF7FB;
+	border-radius: 0px 0px 46px 0px;
+	padding: 122px 215px 112px;
+	position: relative;
+	color: #fff;
+	border-radius: 0 0 46px 46px;
+	overflow: hidden;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 242px;
+		height: 120px;
+		background: url(../img/ice-left.png) bottom left;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	&::after{
+		content: '';
+		display: inline-block;
+		width: 268px;
+		height: 138px;
+		background: url(../img/ice-right.png) bottom right;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5, a{color: #fff;}
+	.icon{fill: #fff;}
+
+	.form-site{
+		margin-top: 60px;
+
+		&__label{
+			background: rgba(73, 182, 219, 0.7);
+			color: #fff;
+		}
+	}
+
+	.input-check{
+		color: inherit;
+		&__mark{border-color: #fff;}
+		.icon{fill: var(--color-secondary);}
+		input[type=checkbox]:checked ~ .input-check__mark{background: #fff;}
+	}
+}
+
+.contacts-info{
+	margin-top: 58px;
+
+	&__item{
+		display: flex;
+		gap: 16px;
+	}
+
+	&__item:not(:last-child){margin-bottom: 21px;}
+
+	&__icon{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		width: 20px;
+		height: 26px;
+	}
+
+	&__phone{
+		font-size: 1.9rem;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	&__mail{font-weight: bold;}
+}

@@ -6,6 +6,8 @@
 	--color-primary-hover: #73d921;
 	--color-secondary: #0099cc;
 	--color-secondary-hover: #44bce3;
+	--color-error: #ff0000;
+	--bg-site: #2b4055;
 	--footer-bg: #2b4055;
 	--footer-color: #fff;
 }
@@ -19,7 +21,7 @@ body{
 	box-sizing:border-box;
 }
 
-body{font-size: 1.6rem;}
+body{font-size: 1.5rem;}
 
 *,
 *:before,
@@ -27,6 +29,11 @@ body{font-size: 1.6rem;}
 	box-sizing: inherit;
 	font-size: inherit;
 	font-family: inherit;
+}
+
+.st-width{
+	margin-left: -215px;
+	margin-right: -215px;
 }
 
 img{max-width: 100%;}
@@ -44,25 +51,26 @@ a:hover{
 
 p{
 	padding: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 1.2rem;
 }
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{color: #000;}
 
 h1,.h1{
 	font-size: 4rem;
-	font-weight: bold;
 	line-height: 1.4;
 	margin-bottom: 4rem;
 }
 
 h2,.h2{
 	font-size: 3.2rem;
-	margin-bottom: 3rem;
+	line-height: 1.4;
+	margin-bottom: 6rem;
 }
 
 h3,.h3{
-	font-size: 2.4rem;
+	font-size: 2.6rem;
+	font-weight: bold;
 	margin-bottom: 2rem;
 }
 
@@ -74,6 +82,18 @@ h4,.h4{
 h5,.h5{
 	font-size: 1.8rem;
 	margin-bottom: 1.5rem;
+}
+
+p+.btn,
+ol+.btn,
+ul+.btn{
+	margin-top: 30px;
+}
+
+h2+p, .h2+p,
+h2+ul, .h2+ul,
+h2+ol, .h2+ol{
+	margin-top: -3.2rem;
 }
 
 .wrapper{
@@ -143,6 +163,28 @@ button.btn{
 		.icon{fill: #fff;}
 	}
 
+	&_secondary{
+		background: var(--color-secondary);
+		border-color: var(--color-secondary);
+
+		&:hover{
+			border-color: var(--color-secondary-hover);
+			box-shadow: inset 0 -5.8em 0 0 var(--color-secondary-hover);
+		}
+	}
+
+	&_white{
+		background: #fff;
+		border-color: #fff;
+		color: var(--color-secondary);
+
+		&:hover{
+			border-color: var(--color-secondary-hover);
+			box-shadow: inset 0 -5.8em 0 0 var(--color-secondary-hover);
+			color: #fff;
+		}
+	}
+
 	&_border{
 		color: var(--color-primary);
 		background: transparent;
@@ -164,6 +206,19 @@ button.btn{
 
 		.icon{fill: var(--color-secondary);}
 	}
+
+	&_big{
+		height: 8.6rem;
+		border-radius: 4.3rem;
+		padding: 0 70px;
+	}
+	
+	&_small{
+		height: 5.2rem;
+		border-radius: 2.6rem;
+		font-size: 1.3rem;
+		padding: 0 50px;
+	}
 }
 
 .code{
@@ -182,3 +237,61 @@ button.btn{
 .text-justify{text-align: justify !important;}
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
+
+// .link-more{
+// 	display: inline-flex;
+// 	gap: 10px;
+// 	@include font(none, none, 1.3rem, 1.4, #696969);
+// 	margin-top: 10px;
+// }
+
+.more-text{
+	position: relative;
+
+	&.hide{
+		height: 150px;
+		overflow: hidden;
+	}
+
+	&.hide::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 50%;
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	&__btn{
+		display: none;
+		position: absolute;
+		bottom: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 3;
+		cursor: pointer;
+		transition: transform 0.4s ease 0s;
+
+		.icon{
+			fill: $color-text;
+			transition: fill 0.2s ease 0s;
+		}
+
+		&:hover .icon{fill: $color-text;}
+	}
+
+	&.hide &__btn{display: inline-block;}
+
+	&.open{
+		// overflow: visible;
+		padding-bottom: 30px;
+		height: auto;
+	}
+
+	&.open::after{display: none;}
+	&.open &__btn{bottom: 0;}
+	&.open &__btn .icon{transform: translateX(-50%) rotate(180deg);}
+}

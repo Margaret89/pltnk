@@ -34,7 +34,7 @@ footer.footer
 				.footer-contacts
 					.footer-phone
 						.footer-phone__icon
-							+svg('ic-call','ic-call', '20', '20')
+							+svg('ic-phone','ic-phone', '19', '20')
 
 						.footer-phone__content
 							.footer-phone__item
@@ -44,7 +44,7 @@ footer.footer
 					
 					.footer-mail
 						.footer-mail__icon
-							+svg('ic-mail','ic-mail', '18', '14')
+							+svg('ic-mail','ic-mail', '18', '15')
 						.footer-mail__content
 							a(href="mailto:info@polytank.ru") info@polytank.ru
 				
@@ -52,4 +52,11 @@ footer.footer
 						img(src="assets/img/logo-strogov-white.png", alt="")
 
 .move-up.js-move-up
-	+svg('ic-arrow-up','ic-arrow-up', '26', '17')
+	+svg('ic-arrow-up','ic-arrow-up', '20', '12')
+
+#msg-success(style='display: none;')
+	.success-alert.js-success-alert
+		.success-alert__title.js-success-alert-title Спасибо,
+			br
+			|ваш запрос отправлен!
+		.success-alert__text.js-success-alert-text Наш менеджер свяжется с вами в ближайшее время

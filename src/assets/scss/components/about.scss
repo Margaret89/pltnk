@@ -1,0 +1,34 @@
+/*-------------- about -----------------*/
+.about{
+	&__img{
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		padding-right: 25px;
+		margin-right: 100px;
+		margin-left: -215px;
+
+		&::before{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 80%;
+			border-radius: 0px 46px 0px 0px;
+			background: #ebf7fb;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		img{position: relative;}
+	}
+
+	&__img_right{
+		justify-content: flex-start;
+		padding-right: 25px;
+		margin-left: 100px;
+		margin-right: -215px;
+
+		img{margin-left: -45px;}
+	}
+}

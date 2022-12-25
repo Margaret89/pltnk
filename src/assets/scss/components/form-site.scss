@@ -1,0 +1,145 @@
+/*-------------- form-site -----------------*/
+.form-page{
+	padding: 78px 60px;
+	background: #fff;
+	border-radius: 0 46px 0 46px;
+
+	.form-site{
+		&__polit{
+			a{
+				color: var(--color-grey);
+				text-decoration: none;
+			}
+
+			a:hover{color: var(--color-primary)}
+		}
+	}
+}
+
+.form-site{
+	&__title{
+		@include font(none, bold, 2.6rem, 1.4, #000);
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__content{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 26px 30px;
+	}
+	
+	&__item{
+		width: 100%;
+		position: relative;
+	}
+
+	&__item.error{position: relative;}
+
+	&__label{
+		@include font(none, bold, 1.3rem, 1, var(--color-text));
+		white-space: nowrap;
+		padding: 0 10px;
+		margin: 0;
+		background: #fff;
+		position: absolute;
+		top: -6px;
+		left: 33px;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="date"],
+	input[type="password"],
+	textarea{
+		display: inline-flex;
+		align-items: center;
+		height: 6rem;
+		width: 100%;
+		font-family: $font-site;
+		@include font(none, none, 1.6rem, 1, var(--color-text));
+		padding: 0 20px;
+		border: 1px solid #ddd;
+		border-radius: 3rem;
+		outline: 0;
+		margin: 0;
+		outline: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: border 0.2s ease 0s;
+	}
+
+	textarea{
+		height: 11.6rem;
+		line-height: 1.6;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	input[type="text"]:focus,
+	input[type="number"]:focus,
+	input[type="date"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		border-color: var(--color-primary);
+	}
+
+	&__item.error{
+		input[type="text"],
+		input[type="number"],
+		input[type="date"],
+		input[type="email"],
+		input[type="password"],
+		textarea{
+			border-color: var(--color-error);
+		}
+	}
+
+	.form-site-msg-error{
+		@include font(none, none, 1.2rem, 1.2, var(--color-error));
+		margin-top: 5px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+
+	&__bottom{margin-top: 26px;}
+
+	&__btn{
+		margin-top: 28px;
+		.btn{width: 100%;}
+	}
+
+	&__error{
+		@include font(normal, normal, 1.6rem, 1.2, var(--color-error));
+		margin-bottom: 10px;
+	}
+
+	&_line &__item{width: calc(50% - 15px);}
+
+	&_line &__bottom{
+		display: flex;
+		gap: 30px;
+		margin-top: 35px;
+	}
+
+	&_line &__polit,
+	&_line &__btn{
+		width: calc(50% - 15px);
+	}
+
+	&_line &__btn{margin-top: 0;}
+}
+
+.success-alert{
+	width: 490px;
+	text-align: center;
+
+	&__title{
+		@include font(none, none, 2.4rem, 1.7, #000);
+	}
+
+	&__text{margin-top: 1.5rem;}
+}

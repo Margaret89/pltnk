@@ -1,0 +1,19 @@
+/*-------------- table-site -----------------*/
+.table-site{
+	width: 100%;
+	font-size: 1.3rem;
+	line-height: 1.4;
+
+	th,
+	td{
+		padding: 16px 10px;
+	}
+
+	th{
+		font-weight: bold;
+		border-bottom: 2px solid var(--color-text);
+	}
+
+	td{border-bottom: 1px solid #e2e2e2;}
+	tr.selected td{background: #eaf7fb;}
+}

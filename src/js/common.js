@@ -1,8 +1,6 @@
 import $ from 'jquery';
+import { Fancybox } from "@fancyapps/ui";
+import 'slick-slider/slick/slick.min.js';
+import Inputmask from "inputmask";
 
-// import 'select2';
-// import { Fancybox } from "@fancyapps/ui";
-// import 'slick-slider/slick/slick.min.js';
-// import Inputmask from "inputmask";
-
-export {$};
+export {$, Fancybox, Inputmask};

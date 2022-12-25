@@ -1,0 +1,72 @@
+/*-------------- slider-works -----------------*/
+.slider-works{
+	display: none;
+	position: relative;
+
+	&.slick-initialized{display: block;}
+	.slick-track{display: flex;}
+	.slick-slide{height: auto;}
+
+	.slick-list{
+		z-index: 2;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.slick-slide > div,
+	.review-item{
+		height: 100%;
+	}
+
+	.slick-slide{margin: 0 15px;}
+
+	&::before{
+		content: '';
+		display: block;
+		width: calc(100% + 430px);
+		height: calc(100% - 84px);
+		border-radius: 46px;
+		background: rgba(0,153,204,1);
+		background: -moz-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
+		background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,153,204,1)), color-stop(100%, rgba(111,198,227,1)));
+		background: -webkit-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
+		background: -o-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
+		background: -ms-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
+		background: linear-gradient(135deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099cc', endColorstr='#6fc6e3', GradientType=1 );
+		position: absolute;
+		bottom: 25px;
+		left: -215px;
+		z-index: 1;
+	}
+
+	&::after{
+		content: '';
+		display: block;
+		width: calc(100% + 428px);
+		height: calc(100% - 86px);
+		border-radius: 46px;
+		background: #fff;
+		border-radius: 45px;
+		position: absolute;
+		bottom: 26px;
+		left: -214px;
+		z-index: 1;
+	}
+}
+
+.slider-works-item{
+	&__img{
+		padding-bottom: 66%;
+		border-radius: 22px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__text{
+		@include font(none, bold, 1.5rem, 1.6, var(--color-text));
+		text-align: center;
+		margin-top: 16px;
+	}
+}

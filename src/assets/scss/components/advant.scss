@@ -1,0 +1,29 @@
+/*-------------- advant -----------------*/
+.advant{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		display: flex;
+		gap: 30px;
+		width: calc(33.33% + 1px);
+		border: 1px solid #ddd;
+		margin: 0 -1px -1px 0;
+		padding: 58px;
+	}
+
+	&__item:nth-child(5n+4),
+	&__item:nth-child(5n){
+		width: calc(50% + 1px);
+	}
+
+	&__item:first-child{border-top-left-radius: 46px;}
+	&__item:last-child{border-bottom-right-radius: 46px;}
+
+	&__icon{
+		flex-shrink: 0;
+		width: 40px;
+
+		.icon{fill: var(--color-primary);}
+	}
+}

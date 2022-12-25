@@ -3,14 +3,13 @@
 // bootstrap
 @import "~bootstrap/scss/bootstrap-grid";
 
-// // fancybox
-// @import '~@fancyapps/ui/dist/fancybox.css';
+// fancybox
+@import '~@fancyapps/ui/dist/fancybox.css';
 
-// // slick
-// @import '~slick-slider/slick/slick.css';
+// slick
+@import '~slick-slider/slick/slick.css';
 
 // Наш сайт
-// @import "utils/libs";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
@@ -22,5 +21,21 @@
 @import "./components/icons.scss";
 @import "./components/type-icon.scss";
 @import "./components/form-search.scss";
-
-
+@import "./components/form-site.scss";
+@import "./components/slick.scss";
+@import "./components/rating.scss";
+@import "./components/input-check.scss";
+@import "./components/input-radio.scss";
+@import "./components/lists.scss";
+@import "./components/rating.scss";
+@import "./components/top-block.scss";
+@import "./components/about.scss";
+@import "./components/advant.scss";
+@import "./components/table-site.scss";
+@import "./components/sizes.scss";
+@import "./components/slider-works.scss";
+@import "./components/contacts.scss";
+@import "./components/reviews.scss";
+@import "./components/map.scss";
+@import "./components/certificate-slider.scss";
+@import "./components/move-up.scss";

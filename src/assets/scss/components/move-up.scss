@@ -1,0 +1,41 @@
+/*-------------- move-up -----------------*/
+.move-up{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 54px;
+	height: 54px;
+	background: var(--color-primary);
+	padding: 5px;
+	text-align: center;
+	position: fixed;
+	right: -100px;
+	bottom: 50px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 100;
+	transition: all 0.2s ease 0s;
+
+	.icon{
+		fill: #fff;
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover{background: var(--color-primary-hover);}
+
+	&.visible{
+		right: 50px;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 991px) {
+	.move-up{
+		width: 54px;
+		height: 54px;
+		bottom: 20px;
+		&.visible{right: 20px;}
+		.icon{width: 18px;}
+	}
+}
