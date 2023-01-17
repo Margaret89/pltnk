@@ -6,14 +6,27 @@
 
 	th,
 	td{
-		padding: 16px 10px;
+		padding: 21px 10px;
+	}
+
+	th:not(:last-child),
+	td:not(:last-child){
+		border-right: 1px solid #e8eeff;
 	}
 
 	th{
 		font-weight: bold;
-		border-bottom: 2px solid var(--color-text);
+		color: #fff;
+		background: var(--color-primary);
 	}
 
-	td{border-bottom: 1px solid #e2e2e2;}
-	tr.selected td{background: #eaf7fb;}
+	tbody tr:nth-child(odd){background: rgba(93, 137, 236, 0.05);}
+	tbody tr td:first-child{background: rgba(93, 137, 236, 0.05);}
+
+	&.text-center th,
+	&.text-center td{
+		text-align: center;
+	}
+
+	&_fixed{table-layout: fixed;}
 }

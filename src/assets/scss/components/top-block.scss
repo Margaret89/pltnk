@@ -17,18 +17,17 @@
 	&__text{
 		padding-left: 35px;
 		position: relative;
+	}
 
-		&::before{
-			content: '';
-			display: inline-block;
-			width: 17px;
-			height: 17px;
-			border-radius: 50%;
-			border: 3px solid var(--color-primary);
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+	&__icon{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.icon{fill: #fff;}
 	}
 }
 

@@ -1,36 +1,19 @@
 /*-------------- contacts -----------------*/
 .contacts{
-	background: linear-gradient(270deg, #6FC6E3 0%, #0099CC 100%), #EBF7FB;
+	background: rgba(3,21,103,1);
+	background: -moz-linear-gradient(left, rgba(3,21,103,1) 0%, rgba(69,89,175,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(3,21,103,1)), color-stop(100%, rgba(69,89,175,1)));
+	background: -webkit-linear-gradient(left, rgba(3,21,103,1) 0%, rgba(69,89,175,1) 100%);
+	background: -o-linear-gradient(left, rgba(3,21,103,1) 0%, rgba(69,89,175,1) 100%);
+	background: -ms-linear-gradient(left, rgba(3,21,103,1) 0%, rgba(69,89,175,1) 100%);
+	background: linear-gradient(to right, rgba(3,21,103,1) 0%, rgba(69,89,175,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031567', endColorstr='#4559af', GradientType=1 );
 	border-radius: 0px 0px 46px 0px;
 	padding: 122px 215px 112px;
 	position: relative;
 	color: #fff;
 	border-radius: 0 0 46px 46px;
 	overflow: hidden;
-
-	&::before{
-		content: '';
-		display: inline-block;
-		width: 242px;
-		height: 120px;
-		background: url(../img/ice-left.png) bottom left;
-		background-size: contain;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
-
-	&::after{
-		content: '';
-		display: inline-block;
-		width: 268px;
-		height: 138px;
-		background: url(../img/ice-right.png) bottom right;
-		background-size: contain;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
 
 	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5, a{color: #fff;}
 	.icon{fill: #fff;}
@@ -39,7 +22,7 @@
 		margin-top: 60px;
 
 		&__label{
-			background: rgba(73, 182, 219, 0.7);
+			background: #2d4095;
 			color: #fff;
 		}
 
@@ -56,7 +39,7 @@
 	.input-check{
 		color: inherit;
 		&__mark{border-color: #fff;}
-		.icon{fill: var(--color-secondary);}
+		.icon{fill: var(--color-primary);}
 		input[type=checkbox]:checked ~ .input-check__mark{background: #fff;}
 	}
 }

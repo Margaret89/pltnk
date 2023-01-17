@@ -26,14 +26,7 @@
 		width: calc(100% + 430px);
 		height: calc(100% - 84px);
 		border-radius: 46px;
-		background: rgba(0,153,204,1);
-		background: -moz-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
-		background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,153,204,1)), color-stop(100%, rgba(111,198,227,1)));
-		background: -webkit-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
-		background: -o-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
-		background: -ms-linear-gradient(-45deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
-		background: linear-gradient(135deg, rgba(0,153,204,1) 0%, rgba(111,198,227,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099cc', endColorstr='#6fc6e3', GradientType=1 );
+		background: var(--color-primary);
 		position: absolute;
 		bottom: 25px;
 		left: -215px;

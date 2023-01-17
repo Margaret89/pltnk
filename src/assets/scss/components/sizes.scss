@@ -1,9 +1,18 @@
 /*-------------- sizes -----------------*/
 .sizes{
+	.h2, h2{margin-bottom: 4rem;}
+
+	&__text{
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
 	&__btn{
 		text-align: center;
 		margin-top: 60px;
 	}
+
+	.table-site{margin-bottom: 60px;}
 }
 
 @media (max-width: 767px) {
