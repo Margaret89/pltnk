@@ -3,3 +3,10 @@
 	.img-left{margin: 0 130px 50px 0;}
 	&__content{padding-left: 90px;}
 }
+
+@media (max-width: 991px) {
+	.desc-block{
+		.img-left{margin: 0 30px 30px 0;}
+		&__content{padding-left: 0;}
+	}
+}
