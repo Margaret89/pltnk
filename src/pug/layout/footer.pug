@@ -1,55 +1,61 @@
 footer.footer
 	.container
 		.row
-			.col-md-4.col-lg-3
-				.footer__copyright 	&copy; 2017 - 2022 Polytank
-
+			.col-md-6.col-lg-3
 				.footer__logo
-					img(src="assets/img/logo-white.png", alt="")
+					img(src="assets/img/logo.png", alt="")
 
-				.footer__slogan Производство накопительных емкостей и очистных сооружений
+				.footer__copyright 	&copy; 2021 Простой ремонт
 
-			.col-md-4.col-lg-6
+				.footer__polit
+					a(href="#") Политика конфиденциальности
+
+			.col-md-6.col-lg-4
 				ul.footer-menu
 					-
 						var list=[
-							{text:'О компании'},
-							{text:'Доставка и оплата'},
-							{text:'Гарантии и возврат'},
+							{text:'Главная'},
+							{text:'Наши работы'},
+							{text:'Готовы решения'},
+							{text:'О нас'},
+							{text:'Акции и скидки'},
+							{text:'Договор'},
 							{text:'Контакты'},
-							{text:'Наше производство'},
-							{text:'Преимущества полипропилена'},
-							{text:'Проектирование и изготовление на заказ'},
 						]
 					each item in list
 						li.footer-menu__item
 							a(href="#").footer-menu__link= item.text
 
-			.col-md-4.col-lg-3
-				form.form-search.form-search_white
-					input(type="text", placeholder="Поиск по сайту")
-					button(type="submit")
-						+svg('ic-search','ic-search', '14', '14')
+			
+			.col-lg-5
+				.footer-contacts-wrap
+					.footer-contacts
+						.footer-contacts__item
+							.footer-contacts__label Адрес:
+							.footer-contacts__val 124482 г. Зеленоград, проспект генерала Алексеева, корп. 118
 
-				.footer-contacts
-					.footer-phone
-						.footer-phone__icon
-							+svg('ic-phone','ic-phone', '19', '20')
+						.footer-contacts__item
+							.footer-contacts__label Время работы:
+							.footer-contacts__val без выходных с 9.00 - 21.00
 
-						.footer-phone__content
-							.footer-phone__item
-								a(href="tel:+78005009647") <b>8 (800)</b> 500-96-47
-							.footer-phone__item
-								a(href="tel:+78127038347") <b>+7 (812)</b> 703-83-47
+						.footer-phone
+							.footer-phone__icon
+								+svg('ic-phone','ic-phone', '19', '20')
+
+							.footer-phone__content
+								.footer-phone__item
+									a(href="tel:+78005009647") <b>8 (499)</b> 343-30-30
+
+					.footer-action
+						a.btn.btn_small(href='#') Позвонить вам?
+
+						.social
+							a(href="#").social__item
+								+svg('ic-vk','ic-vk', '30', '30')
 					
-					.footer-mail
-						.footer-mail__icon
-							+svg('ic-mail','ic-mail', '18', '15')
-						.footer-mail__content
-							a(href="mailto:info@polytank.ru") info@polytank.ru
-				
-					.footer-dev Разработано в - 
-						img(src="assets/img/logo-strogov-white.png", alt="")
+							a(href="#").social__item
+								+svg('ic-ok','ic-ok', '30', '30')
+					
 
 .move-up.js-move-up
 	+svg('ic-arrow-up','ic-arrow-up', '20', '12')

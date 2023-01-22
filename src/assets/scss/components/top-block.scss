@@ -1,33 +1,31 @@
 /*-------------- top-block -----------------*/
 .top-block{
 	border-radius: 0 0 0 46px;
-	background: var(--bg-site) url(../img/bg-top-block.jpg) no-repeat 0 0;
+	background: var(--bg-site) url(../img/bg-top-block.jpg) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 76px 215px;
 
 	&__content{
-		color: #fff;
-
-		h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{color: inherit;}
-
 		.btn{margin-top: 50px;}
 	}
 
 	&__text{
 		padding-left: 35px;
+		padding-right: 85px;
 		position: relative;
+	}
 
-		&::before{
-			content: '';
-			display: inline-block;
-			width: 17px;
-			height: 17px;
-			border-radius: 50%;
-			border: 3px solid var(--color-primary);
-			position: absolute;
-			top: 0;
-			left: 0;
+	&__icon{
+		display: inline-block;
+		width: 17px;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.icon{
+			max-width: 100%;
+			fill: var(--color-primary);
 		}
 	}
 }
@@ -42,6 +40,8 @@
 @media (max-width: 991px) {
 	.top-block{
 		padding: 50px 30px;
+
+		&__text{padding-right: 0;}
 
 		.form-page{
 			margin-top: 40px;

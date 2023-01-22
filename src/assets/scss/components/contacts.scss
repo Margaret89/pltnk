@@ -1,36 +1,12 @@
 /*-------------- contacts -----------------*/
 .contacts{
-	background: linear-gradient(270deg, #6FC6E3 0%, #0099CC 100%), #EBF7FB;
+	background: linear-gradient(270deg, #008CDA 0%, #006AA5 100%);
 	border-radius: 0px 0px 46px 0px;
 	padding: 122px 215px 112px;
 	position: relative;
 	color: #fff;
 	border-radius: 0 0 46px 46px;
 	overflow: hidden;
-
-	&::before{
-		content: '';
-		display: inline-block;
-		width: 242px;
-		height: 120px;
-		background: url(../img/ice-left.png) bottom left;
-		background-size: contain;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
-
-	&::after{
-		content: '';
-		display: inline-block;
-		width: 268px;
-		height: 138px;
-		background: url(../img/ice-right.png) bottom right;
-		background-size: contain;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
 
 	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5, a{color: #fff;}
 	.icon{fill: #fff;}
@@ -39,7 +15,7 @@
 		margin-top: 60px;
 
 		&__label{
-			background: rgba(73, 182, 219, 0.7);
+			background: rgba(0, 129, 200, 0.7);
 			color: #fff;
 		}
 
